@@ -1,0 +1,18 @@
+[x] ask the user their name through prompt
+[x] display a personal welcome message to the user from the prompt
+[] display the user's name back to them in your final message to the user
+            Using Lighthouse:
+[] anazlyze accessibility 
+[] display a screenshot in the readme
+[x] add "use strict" to top of js file
+[] js must pass the rules in the linter installed
+[] 
+[] 
+            HTML
+[] Create a short bio
+[] education history
+[] overview of job experience
+[] any goals
+[] 
+            CSS
+[] mobile first design
