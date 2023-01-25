@@ -1,13 +1,9 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* custom classes  */
-
-
-
-/* custom classes  */
 
 header {
     border: 1px solid black;
@@ -20,9 +16,13 @@ header {
 
 }
 
-header h1, h3 {
+header h1 {
     margin: 1rem 0;
     top: auto;
+}
+
+header h3 {
+    padding-bottom: 1rem;
 }
 
 
@@ -33,7 +33,7 @@ main {
     margin-top: 10rem;
 }
 
-section {
+main section {
     border: 1px solid blue;
     width: 100%;
     height: auto;
@@ -42,12 +42,40 @@ section {
     flex-grow: 1;
 }
 
+section {
+    border: 1px solid blue;
+    width: 100%;
+    height: auto;
+    margin: 1rem;
+    padding: .5rem;
+    flex-grow: 1;
+    text-align: center;
+}
+
 .content h3 {
     text-align: center;
 }
 
 .content ul {
     margin-left: 1rem;
+    padding: .5rem;
+}
+
+ul li {
+    margin-top: .4rem;
+    list-style-type: square;
+}
+
+ol li{
+    margin-top: .4rem;
+}
+
+.content p {
+    padding: .5rem;
+}
+
+#top-ten ul li {
+    list-style-type: circle;
 }
 
 footer {
