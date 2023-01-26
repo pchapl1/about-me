@@ -123,38 +123,41 @@ const askQuestionFive = () => {
 }
 askQuestionFive();
 
-
-// question 6
-let number = 8
-let numGuess = prompt('choose a number')
-// make sure user enters a number
-while (numGuess !== parseInt(numGuess, 10).toString()) {
-    numGuess = prompt(`Enter number. (4 guesses remaining)`);
+askQuestionSix = () => {
+    // question 6
+    let number = 8
+    let numGuess = prompt('choose a number')
+    // make sure user enters a number
+    while (numGuess !== parseInt(numGuess, 10).toString()) {
+        numGuess = prompt(`Enter number. (4 guesses remaining)`);
+    }
+    
+    let userGuessCount = 4
+    let numberGuessesLeft = 4
+    for (let i = 0; i < userGuessCount; i++) {
+        if (i === 4) {
+            alert(`out of guesses, the number was ${number}`)
+        }
+        if (parseInt(numGuess) === number) {
+            console.log('hello again')
+            alert('you got it')
+            count += 1
+            break
+        }
+    
+        else if (parseInt(numGuess) > number) {
+            alert('too high, guess again')
+            numGuess = prompt(`Enter number. (${numberGuessesLeft})`);
+    
+        } else {
+            alert('too low, guess again')
+            numGuess = prompt('enter a number')
+        } 
+        
+    }    
 }
 
-let userGuessCount = 4
-let numberGuessesLeft = 4
-for (let i = 0; i < userGuessCount; i++) {
-    if (i === 4) {
-        alert(`out of guesses, the number was ${number}`)
-    }
-    if (parseInt(numGuess) === number) {
-        console.log('hello again')
-        alert('you got it')
-        count += 1
-        break
-    }
-
-    else if (parseInt(numGuess) > number) {
-        alert('too high, guess again')
-        numGuess = prompt(`Enter number. (${numberGuessesLeft})`);
-
-    } else {
-        alert('too low, guess again')
-        numGuess = prompt('enter a number')
-    } 
-    
-}    
+askQuestionSix();
 
 
 
