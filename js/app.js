@@ -1,21 +1,32 @@
 'use strict'
-
-// prompt the user for their name
-let userName = prompt("Hello, what is your name?")
-console.log(`user name is ${userName}`)
-
-// // get the span where userName will be displayed
-let mySpan = document.getElementById('userName')
-
-// // insert the userName
-mySpan.textContent = userName
-
+// GLOBAL VARIABLES
 
 // inititalize variable count to keep track of the user score
 let count = 0;
 
 // // create array of valid responses
 const validResponses = ['y', 'n', 'yes', 'no']
+
+// GLOBAL VARIABLES
+
+// prompt the user for their name
+const getUserName = () => {
+    let userName = prompt("Hello, what is your name?")
+    console.log(`user name is ${userName}`)
+    
+    // // get the span where userName will be displayed
+    let mySpan = document.getElementById('userName')
+    
+    // // insert the userName
+    mySpan.textContent = userName
+
+    return userName
+}
+
+let userName = getUserName()
+
+
+
 
 const askQuestionOne = () => {
     let industry = prompt("Did I ever work for Nestle? (y/n or yes/no)").toLowerCase()
