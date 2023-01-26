@@ -4,10 +4,12 @@
 // inititalize variable count to keep track of the user score
 let count = 0;
 
-// // create array of valid responses
-const validResponses = ['y', 'n', 'yes', 'no']
+
 
 // GLOBAL VARIABLES
+
+
+
 
 // prompt the user for their name
 const getUserName = () => {
@@ -27,13 +29,12 @@ let userName = getUserName()
 
 
 
-
 const askQuestionOne = () => {
     let industry = prompt("Did I ever work for Nestle? (y/n or yes/no)").toLowerCase()
     
     
     // // check to see if industry response was valid
-    console.log(industry)
+
     while (industry !== 'y' && industry !== 'n' && industry !== 'yes' && industry !== 'no') {
         industry = prompt("Did I ever work for Nestle? (y/n or yes/no)").toLowerCase()
     }
@@ -199,7 +200,6 @@ const askQuestionSeven = () => {
 }
 
 askQuestionSeven();
-
 
 
 alert(`${userName}, you got ${count} out of 7 correct.`)
