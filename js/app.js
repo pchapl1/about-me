@@ -61,23 +61,27 @@ const askQuestionTwo = () => {
 
 askQuestionTwo();
 
-let employed = prompt("Am I currently employed? (y/n or yes/no)")
-
-// // check to see if employed response was valid
-while (employed !== 'y' && employed !== 'n' && employed !== 'yes' && employed !== 'no') {
-    employed = prompt("Am I currently employed? (y/n or yes/no)").toLowerCase()
+const askQuestionThree = () => {
+    let employed = prompt("Am I currently employed? (y/n or yes/no)")
+    
+    // // check to see if employed response was valid
+    while (employed !== 'y' && employed !== 'n' && employed !== 'yes' && employed !== 'no') {
+        employed = prompt("Am I currently employed? (y/n or yes/no)").toLowerCase()
+    }
+    
+     // if yes or y, alert user answered correctly
+    if (employed === 'y' || employed === 'yes') {
+        alert("correct! Nice job!")
+    
+        // add 1 to count for correct answer
+        count += 1
+    } else {
+        alert("Sorry, wrong answer!")
+    
+    }
 }
 
- // if yes or y, alert user answered correctly
-if (employed === 'y' || employed === 'yes') {
-    alert("correct! Nice job!")
-
-    // add 1 to count for correct answer
-    count += 1
-} else {
-    alert("Sorry, wrong answer!")
-
-}
+askQuestionThree();
 
 let mentionAge = prompt("Do I talk about my age in this bio? (y/n or yes/no)")
 
