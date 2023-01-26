@@ -17,26 +17,28 @@ let count = 0;
 // // create array of valid responses
 const validResponses = ['y', 'n', 'yes', 'no']
 
-
-let industry = prompt("Did I ever work for Nestle? (y/n or yes/no)").toLowerCase()
-
-
-// // check to see if industry response was valid
-console.log(industry)
-while (industry !== 'y' && industry !== 'n' && industry !== 'yes' && industry !== 'no') {
-    industry = prompt("Did I ever work for Nestle? (y/n or yes/no)").toLowerCase()
+const askQuestionOne = () => {
+    let industry = prompt("Did I ever work for Nestle? (y/n or yes/no)").toLowerCase()
+    
+    
+    // // check to see if industry response was valid
+    console.log(industry)
+    while (industry !== 'y' && industry !== 'n' && industry !== 'yes' && industry !== 'no') {
+        industry = prompt("Did I ever work for Nestle? (y/n or yes/no)").toLowerCase()
+    }
+    
+    // // if yes or y, alert user answered correctly
+    if (industry === 'y' || industry === 'yes') {
+        alert("correct! Nice job!")
+    
+        // add 1 to count for correct answer
+        count += 1
+    } else {
+        alert("Sorry, wrong answer!")
+    }
 }
 
-// // if yes or y, alert user answered correctly
-if (industry === 'y' || industry === 'yes') {
-    alert("correct! Nice job!")
-
-    // add 1 to count for correct answer
-    count += 1
-} else {
-    alert("Sorry, wrong answer!")
-}
-
+askQuestionOne();
 
 
 // // if yes or y, alert user answered correctly
