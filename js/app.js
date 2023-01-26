@@ -83,22 +83,24 @@ const askQuestionThree = () => {
 
 askQuestionThree();
 
-let mentionAge = prompt("Do I talk about my age in this bio? (y/n or yes/no)")
-
-console.log(mentionAge)
-// check to see if mentionAge response was valid
-while (mentionAge !== 'y' && mentionAge !== 'n' && mentionAge !== 'yes' && mentionAge !== 'no') {
-    mentionAge = prompt("Do I talk about my age in this bio? (y/n or yes/no)").toLowerCase()
-}
-
-// if yes or y, alert user answered correctly
-if (mentionAge === 'n' || mentionAge === 'no') {
-    alert("correct! Nice job!")
-
-    // add 1 to count for correct answer
-    count += 1
-} else {
-    alert("Sorry, wrong answer!")
+const askQuestionFour = () => {
+    let mentionAge = prompt("Do I talk about my age in this bio? (y/n or yes/no)")
+    
+    console.log(mentionAge)
+    // check to see if mentionAge response was valid
+    while (mentionAge !== 'y' && mentionAge !== 'n' && mentionAge !== 'yes' && mentionAge !== 'no') {
+        mentionAge = prompt("Do I talk about my age in this bio? (y/n or yes/no)").toLowerCase()
+    }
+    
+    // if yes or y, alert user answered correctly
+    if (mentionAge === 'n' || mentionAge === 'no') {
+        alert("correct! Nice job!")
+    
+        // add 1 to count for correct answer
+        count += 1
+    } else {
+        alert("Sorry, wrong answer!")
+    }
 }
 
 let codedBefore = prompt("Have I ever taken a coding course in the past? (y/n or yes/no)")
