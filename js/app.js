@@ -121,7 +121,7 @@ let userGuessCount = 4
 let numberGuessesLeft = 4
 for (let i = 0; i < userGuessCount; i++) {
     if (i === 4) {
-        alert('out of guesses')
+        alert(`out of guesses, the number was ${number}`)
     }
     if (parseInt(numGuess) === number) {
         console.log('hello again')
@@ -158,7 +158,7 @@ for (let i = 0; i < numGuesses-1; i++) {
 
         if (colorGuess === rainbowColors[j]) {
             count += 1
-            alert('you got one!')
+            alert(`you got it.  Here were all the possible answers: ${rainbowColors}`)
             correct = true
             break
         }
