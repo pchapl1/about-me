@@ -40,23 +40,26 @@ const askQuestionOne = () => {
 
 askQuestionOne();
 
-
-// // if yes or y, alert user answered correctly
-let startCompany = prompt("Do I want to start my own company after completing this school? (y/n or yes/no)")
-
-// // check to see if startCompany response was valid
-while (startCompany !== 'y' && startCompany !== 'n' && startCompany !== 'yes' && startCompany !== 'no') {
-    startCompany = prompt("Do I want to start my own company after completing this school? (y/n or yes/no)").toLowerCase()
+const askQuestionTwo = () => {
+    // // if yes or y, alert user answered correctly
+    let startCompany = prompt("Do I want to start my own company after completing this school? (y/n or yes/no)")
+    
+    // // check to see if startCompany response was valid
+    while (startCompany !== 'y' && startCompany !== 'n' && startCompany !== 'yes' && startCompany !== 'no') {
+        startCompany = prompt("Do I want to start my own company after completing this school? (y/n or yes/no)").toLowerCase()
+    }
+    // // if yes or y, alert user answered correctly
+    if (startCompany === 'y' || startCompany === 'yes') {
+        alert("correct! Nice job!")
+    
+        // add 1 to count for correct answer
+        count += 1
+    } else {
+        alert("Sorry, wrong answer!")
+    }
 }
-// // if yes or y, alert user answered correctly
-if (startCompany === 'y' || startCompany === 'yes') {
-    alert("correct! Nice job!")
 
-    // add 1 to count for correct answer
-    count += 1
-} else {
-    alert("Sorry, wrong answer!")
-}
+askQuestionTwo();
 
 let employed = prompt("Am I currently employed? (y/n or yes/no)")
 
