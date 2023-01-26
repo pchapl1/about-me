@@ -102,22 +102,26 @@ const askQuestionFour = () => {
         alert("Sorry, wrong answer!")
     }
 }
+askQuestionFour();
 
-let codedBefore = prompt("Have I ever taken a coding course in the past? (y/n or yes/no)")
-
-// check to see if codedBefore response was valid
-while (codedBefore !== 'y' && codedBefore !== 'n' && codedBefore !== 'yes' && codedBefore !== 'no') {
-    codedBefore = prompt("Have I ever taken a coding course in the past? (y/n or yes/no)").toLowerCase()
+const askQuestionFive = () => {
+    let codedBefore = prompt("Have I ever taken a coding course in the past? (y/n or yes/no)")
+    
+    // check to see if codedBefore response was valid
+    while (codedBefore !== 'y' && codedBefore !== 'n' && codedBefore !== 'yes' && codedBefore !== 'no') {
+        codedBefore = prompt("Have I ever taken a coding course in the past? (y/n or yes/no)").toLowerCase()
+    }
+    // if yes or y, alert user answered correctly
+    if (codedBefore === 'y' || codedBefore === 'yes') {
+        alert("correct! Nice job!")
+    
+        // add 1 to count for correct answer
+        count += 1
+    } else {
+        alert("Sorry, wrong answer!")
+    }
 }
-// if yes or y, alert user answered correctly
-if (codedBefore === 'y' || codedBefore === 'yes') {
-    alert("correct! Nice job!")
-
-    // add 1 to count for correct answer
-    count += 1
-} else {
-    alert("Sorry, wrong answer!")
-}
+askQuestionFive();
 
 
 // question 6
