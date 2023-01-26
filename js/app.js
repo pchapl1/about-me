@@ -123,9 +123,9 @@ const askQuestionFive = () => {
 }
 askQuestionFive();
 
-askQuestionSix = () => {
+let number = 8
+const askQuestionSix = () => {
     // question 6
-    let number = 8
     let numGuess = prompt('choose a number')
     // make sure user enters a number
     while (numGuess !== parseInt(numGuess, 10).toString()) {
@@ -188,7 +188,7 @@ const askQuestionSeven = () => {
     }
 }
 
-
+askQuestionSeven();
 
 
 
