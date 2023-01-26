@@ -160,30 +160,31 @@ askQuestionSix = () => {
 askQuestionSix();
 
 
-
-// question 7
-let rainbowColors = ['red', 'orange', 'yellow', 'green', 'brown', 'indigo', 'violet']
-
-let colorGuess = prompt(`Name a color of the rainbow. (6 guesses remanining)`).toLowerCase()
-let numGuesses = 6
-let guessesReamaining = 6
-let correct = false
-for (let i = 0; i < numGuesses-1; i++) {
-    if (correct) {
-        break
-    }
-    for (let j = 0; j < rainbowColors.length; j++ ){
-
-        if (colorGuess === rainbowColors[j]) {
-            count += 1
-            alert(`you got it.  Here were all the possible answers: ${rainbowColors}`)
-            correct = true
+const askQuestionSeven = () => {
+    // question 7
+    let rainbowColors = ['red', 'orange', 'yellow', 'green', 'brown', 'indigo', 'violet']
+    
+    let colorGuess = prompt(`Name a color of the rainbow. (6 guesses remanining)`).toLowerCase()
+    let numGuesses = 6
+    let guessesReamaining = 6
+    let correct = false
+    for (let i = 0; i < numGuesses-1; i++) {
+        if (correct) {
             break
         }
-    }
-    if (!correct){
-        guessesReamaining -=1
-        prompt(`Wrong. Enter a color of the rainbow. (${guessesReamaining} guesses reamaining.)`)
+        for (let j = 0; j < rainbowColors.length; j++ ){
+    
+            if (colorGuess === rainbowColors[j]) {
+                count += 1
+                alert(`you got it.  Here were all the possible answers: ${rainbowColors}`)
+                correct = true
+                break
+            }
+        }
+        if (!correct){
+            guessesReamaining -=1
+            prompt(`Wrong. Enter a color of the rainbow. (${guessesReamaining} guesses reamaining.)`)
+        }
     }
 }
 
